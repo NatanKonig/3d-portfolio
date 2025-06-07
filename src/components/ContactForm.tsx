@@ -65,10 +65,10 @@ const ContactForm = () => {
     <form className="min-w-7xl mx-auto sm:mt-4" onSubmit={handleSubmit}>
       <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
         <LabelInputContainer>
-          <Label htmlFor="fullname">Full name</Label>
+          <Label htmlFor="fullname">Seu nome</Label>
           <Input
             id="fullname"
-            placeholder="Your Name"
+            placeholder="Bill Gates"
             type="text"
             required
             value={fullName}
@@ -76,7 +76,7 @@ const ContactForm = () => {
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
+          <Label htmlFor="email">Seu melhor email</Label>
           <Input
             id="email"
             placeholder="you@example.com"
@@ -88,17 +88,14 @@ const ContactForm = () => {
         </LabelInputContainer>
       </div>
       <div className="grid w-full gap-1.5 mb-4">
-        <Label htmlFor="content">Your Message</Label>
+        <Label htmlFor="content">Sua Mensagem</Label>
         <Textarea
-          placeholder="Tell me about about your project,"
+          placeholder="Digite sua mensagem aqui..."
           id="content"
           required
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <p className="text-sm text-muted-foreground">
-          I&apos;ll never share your data with anyone else. Pinky promise!
-        </p>
       </div>
       <Button
         disabled={loading}
@@ -108,11 +105,11 @@ const ContactForm = () => {
         {loading ? (
           <div className="flex items-center justify-center">
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            <p>Please wait</p>
+            <p>Por favor Aguarde</p>
           </div>
         ) : (
           <div className="flex items-center justify-center">
-            Send Message <ChevronRight className="w-4 h-4 ml-4" />
+            Enviar Mensagem <ChevronRight className="w-4 h-4 ml-4" />
           </div>
         )}
         <BottomGradient />
