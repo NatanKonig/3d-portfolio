@@ -71,7 +71,7 @@ const Header = ({ loader }: HeaderProps) => {
               Menu
             </motion.p>
             <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>
-              Close
+              Fechar
             </motion.p>
           </div>
           <div
